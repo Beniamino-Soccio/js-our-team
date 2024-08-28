@@ -32,7 +32,8 @@ Angela Lopez  |	Social Media Manager |	angela-lopez-social-media-manager.jpg
 Scott Estrada |	Developer            |	scott-estrada-developer.jpg
 Barbara Ramos |	Graphic Designer     |	barbara-ramos-graphic-designer.jpg
 */
-
+//prendo gli elementi di interesse dal dom
+const teamList = document.getElementById('teammates-list');
 //creazione array di oggetti con i dati
 const teammates = [
     {name: 'Wayne Barnett', role: 'Founder & CEO', photo: 'wayne-barnett-founder-ceo.jpg'},
@@ -43,10 +44,21 @@ const teammates = [
     {name: 'Barbara Ramos', role: 'Graphic Designer', photo: 'barbara-ramos-graphic-designer.jpg'},
 ]
 console.table(teammates);
-//stampo in console le info dei nomi , ruoli e la stringa foto
+// ciclando nell'array stampo in console le info dei nomi , ruoli e la stringa foto
+
+let listItem = '';
 for(let teammate of teammates){
     console.log('nome: ', teammate['name']);
     console.log('ruolo: ', teammate['role']);
     console.log('url foto: ', teammate['photo']);
     console.log('---------------------------------');
+    listItem += `
+    <li>
+        <h2> Nome: ${teammate['name']}
+        <p> Ruolo; ${teammate['role']}
+        <p> Url img: ${teammate['photo']}
+    `; 
+    listItem += '</li>';
 }
+//stampo in pagina
+teamList.innerHTML = listItem;
