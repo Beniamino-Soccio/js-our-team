@@ -56,7 +56,7 @@ for(let teammate of teammates){
     <li>
         <img src="img/${teammate['photo']}" alt="teammate">
         <h2> Nome: ${teammate['name']}
-        <p> Ruolo; ${teammate['role']}
+        <p> Ruolo: ${teammate['role']}
         
     `; 
     listItem += '</li>';
