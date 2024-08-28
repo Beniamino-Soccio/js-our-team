@@ -43,3 +43,10 @@ const teammates = [
     {name: 'Barbara Ramos', role: 'Graphic Designer', photo: 'barbara-ramos-graphic-designer.jpg'},
 ]
 console.table(teammates);
+//stampo in console le info dei nomi , ruoli e la stringa foto
+for(let teammate of teammates){
+    console.log('nome: ', teammate['name']);
+    console.log('ruolo: ', teammate['role']);
+    console.log('url foto: ', teammate['photo']);
+    console.log('---------------------------------');
+}
