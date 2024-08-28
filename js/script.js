@@ -54,10 +54,13 @@ for(let teammate of teammates){
     console.log('---------------------------------');
     listItem += `
     <li>
-        <img src="img/${teammate['photo']}" alt="teammate">
-        <h2> Nome: ${teammate['name']}
-        <p> Ruolo: ${teammate['role']}
-        
+        <div class="card" style="width: 17rem;">
+            <img src="img/${teammate['photo']}" class="card-img-top" alt="teammate">
+            <div class="card-body">
+                <h2> Nome: ${teammate['name']} </h2>
+                <p> Ruolo: ${teammate['role']} </p>
+            </div>
+        </div>
     `; 
     listItem += '</li>';
 }
