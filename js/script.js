@@ -55,7 +55,7 @@ for(let teammate of teammates){
     listItem += `
     <li>
         <div class="card" style="width: 17rem;">
-            <img src="img/${teammate['photo']}" class="card-img-top" alt="teammate">
+            <img src="img/${teammate['photo']}" class="card-img-top" alt="${teammate['name']}">
             <div class="card-body">
                 <h2> Nome: ${teammate['name']} </h2>
                 <p> Ruolo: ${teammate['role']} </p>
